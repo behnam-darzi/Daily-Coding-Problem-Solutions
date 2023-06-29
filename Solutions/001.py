@@ -12,11 +12,9 @@ from typing import List
 
 def check_target_sum(arr: List[int], target: int) -> bool:
     # using hash list to store the previously seen values to get access to them in O(1)
-    previous = set()
     for elem in arr:
-        if (target - elem) in previous:
+        if (target - elem) in arr:
             return True
-        previous.add(elem)
     return False
 
 
